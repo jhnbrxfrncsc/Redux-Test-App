@@ -1,24 +1,25 @@
 
 
-export const withdrawMoney = (balance, withdraw) => {
+export const withdrawMoney = value => {
     return {
         type: "WITHDRAW",
-        payload: {
-            withdraw,
-            balance
-        }
+        payload: value
     }
 }
 export const getBalance =  {
         type: "BALANCE",
     }
 
-export const depositMoney = (balance, deposit) => {
+export const depositMoney = value => {
     return {
         type: "DEPOSIT",
-        payload: {
-            deposit,
-            balance
-        }
+        payload: value
+    }
+}
+
+export const collectInterest = (value) => {
+    return {
+        type: "COLLECT_INTEREST",
+        payload: value
     }
 }
